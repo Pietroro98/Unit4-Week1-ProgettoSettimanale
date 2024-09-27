@@ -1,6 +1,7 @@
 package mains;
 
 import model.ElementoMultimediale;
+import model.RiproduciElemento;
 import model.Video;
 
 import java.util.Scanner;
@@ -47,6 +48,20 @@ public class Main {
             }
         }
 
+        int sceltaElementoDaEseguire;
+        do {
+            System.out.println("Quale elemento vuoi eseguire? (1-5, oppure 0 per finire");
+            sceltaElementoDaEseguire = sc.nextInt();
+            if (sceltaElementoDaEseguire > 0 && sceltaElementoDaEseguire <= 5) {
+                ElementoMultimediale e = elementi[sceltaElementoDaEseguire - 1];
+                if (e instanceof model.Immagine) {
+                    ((model.Immagine) e).show();
+                } else if (e instanceof RiproduciElemento) {
+                    ((RiproduciElemento) e).play();
+                }
+            }
+
+        } while(sceltaElementoDaEseguire != 0);
 
 
     }

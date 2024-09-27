@@ -1,6 +1,6 @@
 package model;
 
-public class RegistrazioneAudio extends ElementoMultimediale {
+public class RegistrazioneAudio extends ElementoMultimediale implements RiproduciElemento {
     private int durata;
     private int volume;
 
@@ -17,8 +17,23 @@ public class RegistrazioneAudio extends ElementoMultimediale {
         volume--;
     }
 
+
+//    private String repeat(String str, int count) {
+//        StringBuilder result = new StringBuilder();
+//        for (int i = 0; i < count; i++) {
+//            result.append(str);
+//        }
+//        return result.toString();
+//    }
+
+
+
+    @Override
     public void play() {
-        System.out.println(titolo + " " + "!".repeat(volume));
+        for (int i = 0; i < durata; i++) {
+//            System.out.println(titolo + " " + repeat("!", volume));
+            System.out.println(titolo + " " + "!".repeat(volume));
+        }
     }
 
 }
