@@ -17,4 +17,8 @@ public class RegistrazioneAudio extends ElementoMultimediale {
         volume--;
     }
 
+    public void play() {
+        System.out.println(titolo + " " + "!".repeat(volume));
+    }
+
 }

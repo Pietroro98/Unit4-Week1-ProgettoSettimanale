@@ -24,4 +24,9 @@ public class Video extends ElementoMultimediale {
         luminosita--;
     }
 
+    public void play() {
+        System.out.println(titolo + " " + "!".repeat(volume) + "*".repeat(luminosita));
+    }
+
+
 }

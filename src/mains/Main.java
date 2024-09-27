@@ -16,6 +16,8 @@ public class Main {
             sc.nextLine();
             System.out.println("Inserisci il un titolo: ");
             String titolo = sc.nextLine();
+
+
             switch (opzione) {
                 case 1:
                     System.out.println("inserisci la luminosita desiderata: ");
@@ -44,6 +46,8 @@ public class Main {
                     break;
             }
         }
+
+
 
     }
 }
